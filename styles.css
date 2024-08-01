@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+.sidebar {
+  width: 100%;
+  background-color: #86efac;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px;
+  text-align: center;
+  height: 33vh;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    width: 40%;
+    height: auto;
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  color: #22c55e;
+}
+
+.logo-text {
+  text-align: left;
+  font-size: 3rem;
+  font-weight: 400;
+  /* font-weight: bold; */
+}
+
+@media (min-width: 768px) {
+  .logo-text {
+    font-size: 3rem;
+  }
+}
+
+.description {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.main-content {
+  width: 100%;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  padding: 16px;
+  flex-grow: 1;
+}
+
+.loginContainer {
+  width: 100%;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  flex-grow: 1;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.login-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 2.5rem;
+}
+.btnContainer {
+  width: 100%;
+}
+.input-field {
+  width: 100%;
+  padding: 1.5rem;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  background-color: rgba(203, 213, 225, 0.2);
+  outline: none;
+  transition: all 0.3s;
+}
+
+.input-field:focus {
+  border-color: #22c55e;
+}
+
+.login-button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px solid #d1d5db;
+  background-color: #22c55e;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login-button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.wel-text {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.logout-button {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  border: 2px solid #d1d5db;
+  background-color: #22c55e;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.tabsContainer {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  background-color: rgba(203, 213, 225, 0.2);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.tab {
+  /* background-color: rgba(203, 213, 225, 0.2); */
+  color: #000;
+  margin: 0;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.tab-btn {
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  /* margin-top: 10px; */
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.tab.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.tabPanel {
+  display: none;
+}
+
+.tabPanel.active {
+  display: block;
+}
+
+.formBox {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-input {
+  padding: 0.8rem;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  background-color: rgba(203, 213, 225, 0.2);
+  outline: none;
+  transition: all 0.3s;
+}
+.form-input:focus{
+  border-color: #22c55e;
+}
+.form-button {
+  padding: 10px;
+  background-color: #22c55e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #14a74a;
+  transform: scale(1.05);
+}
+
+.searchResult, .viewAllResult {
+    margin-top: 20px;
+}
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #f9f9f9;
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: #333;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.card p strong {
+    color: #333;
+}
+
+
+.update-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.action-button {
+    background-color: #22c55e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.action-button:hover {
+    background-color: #1da34a;
+}
+
+.updateResult {
+    margin-top: 20px;
+}
+
+.updateCard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.updateCard h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.updateCard p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #666;
+}
+
+/* Styling for the delete button */
+.delete-button {
+    background-color: #f44336; /* Red background color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Additional styling for result container */
+.result-container {
+    margin-top: 20px;
+}
+
+.result-container .card {
+    margin-bottom: 20px;
+}
+
+.result-container .card h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.result-container .card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+

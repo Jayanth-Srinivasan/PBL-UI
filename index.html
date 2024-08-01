@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Protect</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="sidebar">
+        <div class="logo-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="#22c55e"
+            class="logo"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+
+          <h1 class="logo-text">
+            Star <br />
+            Protect
+          </h1>
+        </div>
+        <h1 class="description">
+          A one-stop unified solution to manage your insurances for your
+          vehicles.
+        </h1>
+      </div>
+      <main class="main-content">
+        <div id="login-section" class="loginContainer">
+          <div class="login">
+            <h1 class="login-title">Login</h1>
+            <div class="inputBox">
+              <input id="username" placeholder="Username" class="input-field" />
+
+              <input
+                id="password"
+                type="password"
+                placeholder="Password"
+                class="input-field"
+              />
+            </div>
+            <div class="btnContainer">
+              <button id="login-button" class="login-button">Login</button>
+            </div>
+          </div>
+        </div>
+        <div id="admin-dashboard" class="hidden adminContainer">
+          <div class="admin-header">
+            <h1 class="wel-text">Welcome, Admin</h1>
+            <button id="logout-button" class="logout-button">Logout</button>
+          </div>
+          <div class="tabsContainer">
+            <div class="tabs">
+              <button
+                class="tab tab-btn active"
+                data-tab="underwriter-registration"
+              >
+                Register Underwriter
+              </button>
+              <button class="tab tab-btn" data-tab="search-underwriter">
+                Search
+              </button>
+              <button class="tab tab-btn" data-tab="update-password">
+                Update Password
+              </button>
+              <button class="tab tab-btn" data-tab="delete-underwriter">
+                Delete Underwriter
+              </button>
+              <button class="tab tab-btn" data-tab="view-all">View All</button>
+            </div>
+            <div class="tabContent">
+              <div class="tabPanel active" id="underwriter-registration">
+                <div class="formBox">
+                  <form id="underwriter-form" class="form-container">
+                    <h1 class="form-title">Underwriter Registration</h1>
+
+                    <div class="form-group">
+                      <label for="underwriterId">Underwriter ID</label>
+                      <input
+                        type="text"
+                        id="underwriterId"
+                        class="form-input"
+                        placeholder="Enter Underwriter ID"
+                        disabled
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input
+                        type="text"
+                        id="name"
+                        class="form-input"
+                        placeholder="Enter Name"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="dob">Date of Birth</label>
+                      <input type="date" id="dob" class="form-input" required />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="joiningDate">Joining Date</label>
+                      <input
+                        type="date"
+                        id="joiningDate"
+                        class="form-input"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="defaultPassword">Default Password</label>
+                      <input
+                        type="text"
+                        id="defaultPassword"
+                        class="form-input"
+                        placeholder="Enter Default Password"
+                        disabled
+                      />
+                    </div>
+
+                    <button type="submit" class="form-button">
+                      Register Underwriter
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div id="search-underwriter" class="tabPanel">
+                <h2>Search Underwriter</h2>
+                <input
+                  type="text"
+                  id="search-id"
+                  placeholder="Enter Underwriter ID"
+                  class="form-input"
+                />
+                <button id="search-button" class="form-button">Search</button>
+                <div id="search-result" class="searchResult"></div>
+              </div>
+
+              <div class="tabPanel" id="update-password">
+                <h2>Update Underwriter Password</h2>
+                <input
+                  type="text"
+                  id="update-id"
+                  placeholder="Enter Underwriter ID"
+                  class="form-input"
+                />
+                <input
+                  type="text"
+                  id="new-password"
+                  placeholder="Enter New Password"
+                  class="form-input"
+                />
+                <button id="update-button" class="action-button">
+                  Update Password
+                </button>
+                <div id="update-result" class="updateResult"></div>
+              </div>
+
+              <div class="tabPanel" id="delete-underwriter">
+                <h2>Delete Underwriter by ID</h2>
+                <input
+                  type="text"
+                  id="delete-id"
+                  placeholder="Enter Underwriter ID"
+                  class="form-input"
+                />
+                <button id="delete-button" class="form-button">Search</button>
+                <div id="delete-result" class="result-container"></div>
+              </div>
+              <div class="tabPanel" id="view-all">
+                <h2>View All Underwriters</h2>
+                <button id="view-all-button">View All</button>
+                <div id="view-all-result" class="card-grid"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="user-dashboard" class="hidden">User Dashboard</div>
+      </main>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
