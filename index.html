@@ -179,15 +179,101 @@
                 <button id="delete-button" class="form-button">Search</button>
                 <div id="delete-result" class="result-container"></div>
               </div>
-              <div class="tabPanel" id="view-all">
+              <div id="view-all" class="tabPanel">
                 <h2>View All Underwriters</h2>
-                <button id="view-all-button">View All</button>
-                <div id="view-all-result" class="card-grid"></div>
+                <div id="view-all-container"></div>
               </div>
             </div>
           </div>
         </div>
-        <div id="user-dashboard" class="hidden">User Dashboard</div>
+        <div id="user-dashboard" class="hidden adminContainer">
+          <div class="admin-header">
+            <h1 class="wel-text">Welcome, User</h1>
+            <button id="logout-button" class="logout-button">Logout</button>
+          </div>
+          <div class="tabsContainer">
+            <div class="tabs">
+              <button class="tab tab-btn active" data-tab="create-policy">
+                Create New Policy
+              </button>
+              <button class="tab tab-btn" data-tab="search-underwriter">
+                View All Policies
+              </button>
+            </div>
+            <div class="tabContent">
+              <div class="tabPanel active" id="create-policy">
+                <div class="formBox">
+                  <form id="policy-form" class="form-container">
+                    <h1 class="form-title">Create New Vehicle Insurance</h1>
+
+                    <div class="form-group">
+                      <label for="underwriterId">Underwriter ID</label>
+                      <input
+                        type="text"
+                        id="underwriterId"
+                        class="form-input"
+                        placeholder="Enter Underwriter ID"
+                        disabled
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input
+                        type="text"
+                        id="name"
+                        class="form-input"
+                        placeholder="Enter Name"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="dob">Date of Birth</label>
+                      <input type="date" id="dob" class="form-input" required />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="joiningDate">Joining Date</label>
+                      <input
+                        type="date"
+                        id="joiningDate"
+                        class="form-input"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="defaultPassword">Default Password</label>
+                      <input
+                        type="text"
+                        id="defaultPassword"
+                        class="form-input"
+                        placeholder="Enter Default Password"
+                        disabled
+                      />
+                    </div>
+
+                    <button type="submit" class="form-button">
+                      Register Underwriter
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div id="search-underwriter" class="tabPanel">
+                <h2>Search Underwriter</h2>
+                <input
+                  type="text"
+                  id="search-id"
+                  placeholder="Enter Underwriter ID"
+                  class="form-input"
+                />
+                <button id="search-button" class="form-button">Search</button>
+                <div id="search-result" class="searchResult"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </section>
     <script src="script.js"></script>
